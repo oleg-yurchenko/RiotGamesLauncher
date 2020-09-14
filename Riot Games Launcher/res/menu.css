@@ -1,0 +1,21 @@
+html {
+    background: IndianRed;
+}
+
+h1 {
+    vertical-align: top;
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    flow: vertical;
+    border-spacing: *;
+}
+
+game {
+    prototype: Game url(menu.tis);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}

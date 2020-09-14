@@ -1,0 +1,12 @@
+class Game : Element
+{
+	function attached() {
+		var name = this.attributes["gameName"];
+		if(name == "league_of_legends")
+			this.content(<h3>League of Legends</h3>);
+		else if(name == "valorant")
+			this.content(<h3>Valorant</h3>);
+		else if(name == "bacon")
+			this.content(<h3>Legends of Runeterra</h3>);
+	}
+}
