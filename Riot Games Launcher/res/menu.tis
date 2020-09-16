@@ -10,3 +10,8 @@ class Game : Element
 			this.content(<h3>Legends of Runeterra</h3>);
 	}
 }
+
+event click $(button) {
+	//view.msgbox(#alert, "test");
+	view.frame.launch("lol_live");
+}
