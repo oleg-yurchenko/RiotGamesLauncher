@@ -4,26 +4,20 @@
         <style src="menu.css"/>
     </head>
     <body>
-        <h1>Riot Games Launcher</h1>
-        <div class="container">
-            <div class="gameContainer">
-                <game gameName="league_of_legends"/>
-                <div class="buttonContainer">
-                    <button id="lol_live">Live</button>
-                    <button id="lol_pbe">PBE</button>
-                </div>
+        <div class="verticalContainer">
+            <h1 class="titleHeader">Riot Games Launcher</h1>
+            <game gameName="league_of_legends" />
+            <div gameName="league_of_legends" class="collapsibleContainer">
+                <button class="gameButton" id="lol_live">Live</button>
+                <button class="gameButton" id="lol_pbe">PBE</button>
             </div>
-            <div class="gameContainer">
-                <game gameName="valorant"/>
-                <div class="buttonContainer">
-                    <button id="val_live">Live</button>
-                </div>
+            <game gameName="valorant" />
+            <div gameName="valorant" class="collapsibleContainer">
+                <button class="gameButton" id="val_live">Live</button>
             </div>
-            <div class="gameContainer">
-                <game gameName="bacon"/>
-                <div class="buttonContainer">
-                    <button id="lor_live">Live</button>
-                </div>
+            <game gameName="bacon" />
+            <div gameName="bacon" class="collapsibleContainer">
+                <button class="gameButton" id="lor_live">Live</button>
             </div>
         </div>
     </body>

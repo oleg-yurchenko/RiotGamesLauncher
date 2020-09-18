@@ -1,17 +1,32 @@
+view.windowCaption = "Riot Games Launcher";
+view.windowMinSize = (1100, 600);
+
 class Game : Element
 {
 	function attached() {
 		var name = this.attributes["gameName"];
 		if(name == "league_of_legends")
-			this.content(<h3>League of Legends</h3>);
+			this.content(<button class="gameDiv" gameName="league_of_legends">League of Legends</button>);
 		else if(name == "valorant")
-			this.content(<h3>Valorant</h3>);
+			this.content(<button class="gameDiv" gameName="valorant">Valorant</button>);
 		else if(name == "bacon")
-			this.content(<h3>Legends of Runeterra</h3>);
+			this.content(<button class="gameDiv" gameName="bacon">Legends of Runeterra</button>);
 	}
 }
 
-event click $(button) {
+event click $(button.gameButton) {
 	//view.msgbox(#alert, "test");
-	view.frame.launch("lol_live");
+	view.frame.launch(this.attributes["id"]);
+}
+
+event click $(button.gameDiv) {
+	//view.msgbox(#alert, "test");
+	var gameName = this.attributes["gameName"];
+	var collapsibleDiv = $(div[gameName='{gameName}']);
+	if(collapsibleDiv.style#visibility == "collapse") {
+		collapsibleDiv.style#visibility = "visible";
+	} else {
+		collapsibleDiv.style#visibility = "collapse";
+	}
+	
 }
